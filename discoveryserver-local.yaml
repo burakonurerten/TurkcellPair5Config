@@ -1,6 +1,6 @@
 spring:
   application:
-    name: gatewayserver
+    name: discoveryserver
   cloud:
     config:
       profile: local
