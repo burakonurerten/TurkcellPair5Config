@@ -1,17 +1,13 @@
 spring:
-  
   cloud:
-    discoveryserver:
-      config:
-        profile: local
     config:
-      import: "configserver:${configUrl}"
-
-
-configUrl: http://localhost:8888
+      import: "configserver:http://localhost:8888" # Point to your Config Server URL
+    discovery:
+      enabled: true # Enable service discovery
 
 server:
   port: 8888
+
 eureka:
   client:
     serviceUrl:
