@@ -1,13 +1,17 @@
 spring:
+  
   cloud:
+    discoveryserver:
+      config:
+        profile: local
     config:
-      import: "configserver:http://localhost:8888" 
-    discovery:
-      enabled: true 
+      import: "configserver:${configUrl}"
+
+
+configUrl: http://localhost:8888
 
 server:
   port: 8888
-
 eureka:
   client:
     serviceUrl:
